@@ -10,6 +10,7 @@ lst = list(map(int, input('Введите элементы списка чере
 print(lst)
 s = 0
 for i in range(len(lst)//2):
-    print(f'lst[{i}] * lst[{len(lst)-1-i}] = {lst[i] * lst[len(lst)-1-i]}') 
+    #print(f'lst[{i}] * lst[{len(lst)-1-i}] = {lst[i] * lst[len(lst)-1-i]}') 
+    print(f'lst[{i}] * lst[{-i-1}] = {lst[i] * lst[-i-1]}')
 if len(lst)%2 == 1:
-    print(f'lst[{len(lst)//2+1}] = {lst[len(lst)//2+1]**2}') 
+    print(f'lst[{len(lst)//2}] = {lst[len(lst)//2]**2}') 
