@@ -5,13 +5,16 @@
 #*Пример:*
 
 #- [1.11, 1.2, 3.1, 5, 10.01] => 0.19
+
+import decimal
+
 lst = list(input('Введите элементы списка через ",": ').split(','))
 print(lst)
 lst1=[]
 for i in lst:
     beg = i.find('.')
     if beg >= 0:
-        lst1.append(float(i[beg:len(i)]))
+        lst1.append(decimal.Decimal(i[beg:len(i)]))
 print(lst1)
 print(f'Разница между максимальной дробной частью {max(lst1)} и минимальной дробной частью {min(lst1)} равна {max(lst1) - min(lst1)}')
-   
+
