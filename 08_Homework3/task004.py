@@ -7,7 +7,7 @@
 #- 3 -> 11
 #- 2 -> 10
 
-num = int(input('Введит десятичное число..'))
+num = int(input('Введит десятичное число (вычисление через цикл)..'))
 num_abs = abs(num)
 s = ''
 while num_abs != 0 and num_abs != 1:
@@ -18,4 +18,8 @@ while num_abs != 0 and num_abs != 1:
 s = str(num_abs) + s
 if num < 0:
     s = '-' + s
+print(s)
+
+#вариант 2
+s = bin(int(input('Введит десятичное число (python сам все сделает)..')))
 print(s)
